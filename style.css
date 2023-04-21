@@ -1,7 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800&display=swap');
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+body{
+    font-family: 'Roboto Slab', serif;
+    height: 5000px;
+}
 
+.navbar-dark{
+    height: 57px;
+    background-color: #000;
+}
+.white {
+    color: white;
+    display: flex;
+    align-items: center; 
+    font-family:  'Roboto Slab', serif;
+    
+}
+.phone, .mail-3{
+    padding-right: 8px;
+    font-size: 11px;
+}
 
+.Telegram, .Twitter, .Whatsapp, .Facebook{
+    padding: 0 8px 0px 8px;
+    font-size: 11px;
+}
 
+.contact{
+ margin-left: 10%;
+ 
+}
 
+.social-media{
+    margin-right: 10%;
+}
+
+.link-white a{
+    color: #fff;
+}
+
+.link-orange a{
+    color: #EEC221;
+}
