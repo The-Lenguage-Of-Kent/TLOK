@@ -1,1 +1,67 @@
-ECHO est  activado.
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800&display=swap');
+
+body{
+    font-family: 'Roboto Slab', serif;
+    height: 5000px;
+}
+
+.navbar-dark{
+    height: 50px;
+    background-color: #000;
+}
+.white {
+    color: white;
+    display: flex;
+    align-items: center; 
+    font-family:  'Roboto Slab', serif;
+    font-size: 10px;
+    
+}
+.phone, .mail-3{
+    padding-right: 8px;
+    font-size: 8px;
+    width: 20px;
+    height: 22px; 
+}
+
+.Telegram, .Twitter, .Whatsapp{
+    padding: 0 8px 0px 8px;
+    font-size: 8px;
+    width: 26px;
+    height: 24px; 
+}
+.Facebook{
+    padding: 0 8px 0px 8px;
+    font-size: 8px;
+    width: 22px;
+    height: 24px; 
+}
+
+.contact{
+ margin-left: 10%;
+ 
+}
+
+.social-media{
+    margin-right: 12%;
+}
+
+.link-white a{
+    color: #fff;
+}
+
+.link-orange a{
+    color: #EEC221;
+}
+
+.logo{
+    width: 135px;
+    height: 35px;
+}
+
+.nv-i, .nv-i a{
+    margin-right: 5px;
+    color: #000;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+}
