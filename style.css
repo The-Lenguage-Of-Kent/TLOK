@@ -65,3 +65,68 @@ body{
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
 }
+
+.slide{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 900px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.position, .position-slider{
+    position:relative;
+    top: -55px;
+    left: 0;
+    width: 1980px;
+    height: 1000px;
+}
+
+h1, h2{
+position: absolute;
+width: 608.57px;
+height: 151px;
+top: -600px;
+text-align: left;
+font-family: 'Roboto Slab';
+font-weight: 700;
+font-size: 55px;
+line-height: 83px;
+display: flex;
+text-transform: uppercase;
+color: #990071;
+font-weight: bolder;
+}
+
+
+.txt1, .txt2, .txt3{
+position: absolute;
+width: 550px;
+height: auto;
+top: -500px;
+text-align: justify;
+font-family: 'Roboto Slab';
+font-weight: 400;
+font-size: 20px;
+line-height: 30px;
+display: flex;
+align-items: center;
+color: #000000;
+}
+
+.position-buttom{
+    position: relative;
+    top: -120px;
+}   
+
+.boton-slider{
+display: flex;
+position: absolute;
+width: 173.11px;
+height: 47px;
+left: 0px;
+top: -320px;
+background: #EEC221;
+}
