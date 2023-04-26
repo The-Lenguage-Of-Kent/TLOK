@@ -119,4 +119,14 @@ color: #000000;
 .position-buttom{
     position: relative;
     top: -120px;
+}   
+
+.boton-slider{
+display: flex;
+position: absolute;
+width: 173.11px;
+height: 47px;
+left: 0px;
+top: -320px;
+background: #EEC221;
 }
