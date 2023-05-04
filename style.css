@@ -135,7 +135,7 @@ h1, h2{
     margin-top: 150px;
     padding: 100px 0 100px 0;
     height: 100%;
-    background: rgba(126, 126, 126, 0.54);
+    background: rgba(126, 126, 126, 0.928);
 }
 
 .modify-grid{
@@ -157,14 +157,15 @@ h1, h2{
     color: #20006A;
 }
 .c-o-layer{
-    background: #EEC221;
+    background:#EEC221;
     border: 1px solid #EEC221;
 }
 .c-o{
     background: #EEC221;
 }
 .c-o-txt{
-    color: #EEC221;
+    color: #EEC221  ;
+
 }
 .c-v-layer{
     background: #990071;
@@ -224,10 +225,12 @@ h1, h2{
     font-family: 'Roboto Slab', serif;
     font-weight: bolder ;
     transition: color 0.5s;
+    -webkit-text-stroke: 0.3px #000;
 }
 
 .tittle:hover {
     color: #848282;
+    -webkit-text-stroke: 0.3px #000;
 }
 
 .pseudo1{
@@ -235,8 +238,6 @@ h1, h2{
     margin-top: 20px;
     width: 42px;
     height: 2px;
-    
-
 }
 .info{
     position: absolute;
