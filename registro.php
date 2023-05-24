@@ -1,6 +1,7 @@
 <?php
 
 error_reporting(E_ALL);
+
 ini_set('display_errors', '1');
 
 require "./config/database.php";
@@ -22,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $estado = $_POST["estado"];
 
     // Consulta SQL para insertar datos en la tabla
-    $sql = "INSERT INTO usuario_dimensiones (cc, nombre, apellido, fecha_nacimiento, correo, contraseña, institucion, estado) VALUES ('$cc', '$nombre', '$apellido', '$fecha_nacimiento', '$correo', '$contraseña', '$instituto', '$estado')";
+    $sql = "INSERT INTO usuario_dimensiones (num_documento, nombre, apellido, fecha_nacimiento, correo, contraseña, institucion, estado) VALUES ('$cc', '$nombre', '$apellido', '$fecha_nacimiento', '$correo', '$contraseña', '$instituto', '$estado')";
 
     // Ejecutar la consulta y verificar si fue exitosa
     if (mysqli_query($db, $sql)) {
@@ -31,11 +32,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error: " . $sql . "<br>" . mysqli_error($db);
     }
 
-    header('Location: Login.php');
-    exit();
-}
+    header('location: Login.php');
 
-mysqli_close($db);
+    mysqli_close($db);
+}
 
 ?>
 
