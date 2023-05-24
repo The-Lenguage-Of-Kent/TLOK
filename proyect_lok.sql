@@ -68,7 +68,7 @@ CREATE TABLE `interfaz` (
   KEY `fk_Interfaz.dimensiones_LOK_hecho1_idx` (`LOK_hecho_idPage`),
   KEY `fk_Interfaz_dimensiones_CuentaUsuario_dimensiones1_idx` (`usuario_dimensiones_CC`),
   CONSTRAINT `fk_Interfaz.dimensiones_LOK_hecho1` FOREIGN KEY (`LOK_hecho_idPage`) REFERENCES `proyect_LOK_hecho` (`idPage`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Interfaz_dimensiones_CuentaUsuario_dimensiones1` FOREIGN KEY (`usuario_dimensiones_CC`) REFERENCES `usuario_dimensiones` (`cc`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_Interfaz_dimensiones_CuentaUsuario_dimensiones1` FOREIGN KEY (`usuario_dimensiones_CC`) REFERENCES `usuario_dimensiones` (`num_documento`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -202,7 +202,7 @@ DROP TABLE IF EXISTS `usuario_dimensiones`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuario_dimensiones` (
-  `cc` int(11) NOT NULL,
+  `num_documento` int(10) NOT NULL,
   `nombre` varchar(45) NOT NULL,
   `apellido` varchar(45) NOT NULL,
   `fecha_nacimiento` date NOT NULL,
@@ -211,7 +211,7 @@ CREATE TABLE `usuario_dimensiones` (
   `institucion` varchar(45) NOT NULL,
   `estado` char(1) NOT NULL,
   `roll` char(1) NOT NULL DEFAULT 'e',
-  PRIMARY KEY (`cc`),
+  PRIMARY KEY (`num_documento`),
   UNIQUE KEY `correo_UNIQUE` (`correo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -222,6 +222,7 @@ CREATE TABLE `usuario_dimensiones` (
 
 LOCK TABLES `usuario_dimensiones` WRITE;
 /*!40000 ALTER TABLE `usuario_dimensiones` DISABLE KEYS */;
+INSERT INTO `usuario_dimensiones` VALUES (1003459057,'johan','laguna','2001-11-01','johanlaguna@hotmail.com','$2y$10$yW5G1MnYuiYDV3BY3nbWKuWN2.wqn5SyO/HQswjRdEzo.D7OelLN2','','a','i'),(1056700305,'jose','perez','2023-05-03','josefito@hotmail.com','$2y$10$56P58knrYsHn9rpuCW3SeOHiJdJy9/n5qfondX8K.HDQp9qFm8Wr6','','a','u'),(1234567891,'mano','lo','2023-05-18','perez@gmail.com','$2y$10$NDgwq6PVJTtfgzfdJ45iv.bJVc.JuQLr6aYRuLiYfuhHsfrNKXeHO','fumapeta','a','e');
 /*!40000 ALTER TABLE `usuario_dimensiones` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -245,7 +246,7 @@ CREATE TABLE `usuarioxmodulos` (
   KEY `fk_usuarioxmodulos_ModuloAprendizaje_dimensiones1_idx` (`ModuloAprendizaje_id`),
   KEY `fk_usuarioxmodulos_usuario_dimensiones1_idx` (`usuario_dimensiones_cc`),
   CONSTRAINT `fk_usuarioxmodulos_ModuloAprendizaje_dimensiones1` FOREIGN KEY (`ModuloAprendizaje_id`) REFERENCES `modulo_aprendizaje_dimensiones` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_usuarioxmodulos_usuario_dimensiones1` FOREIGN KEY (`usuario_dimensiones_cc`) REFERENCES `usuario_dimensiones` (`cc`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_usuarioxmodulos_usuario_dimensiones1` FOREIGN KEY (`usuario_dimensiones_cc`) REFERENCES `usuario_dimensiones` (`num_documento`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -267,4 +268,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-24 12:31:09
+-- Dump completed on 2023-05-24 17:16:01
