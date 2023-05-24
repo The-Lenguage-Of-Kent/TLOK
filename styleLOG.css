@@ -19,11 +19,18 @@ body{
 .position{
     position: absolute;
     left: 0;
-    top: 6em;
     width: 700px;
     height: auto;
     display: flex; 
     align-items: center;
     justify-content: center;
   
+}
+
+.top-em-6{
+    top: 6em;
+}
+
+.top-em-15{
+    top: 15em;
 }
