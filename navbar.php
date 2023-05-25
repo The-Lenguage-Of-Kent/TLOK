@@ -1,4 +1,5 @@
 <?php
+require "./config/database.php";
 session_start();
 $loggedin = false;
 $username = "nombre";
