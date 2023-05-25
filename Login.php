@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           </div>
           <div class="col-10">
             <label for="validationCustom06" class="form-label">Contraseña *</label>
-            <input type="password" id="contraseña" name="contraseña" placeholder="I********" class="form-control" aria-describedby="passwordHelpBlock" required>
+            <input type="password" id="contraseña" name="contraseña" placeholder="********" class="form-control" aria-describedby="passwordHelpBlock" required>
             <div class="invalid-feedback">
               Por favor ingrese su contraseña
             </div>

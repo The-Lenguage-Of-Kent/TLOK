@@ -149,7 +149,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
           <div class="col-10">
             <label for="validationCustom06" class="form-label">Contraseña *</label>
-            <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpBlock" name="contraseña"required>
+            <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpBlock" name="contraseña" placeholder="********" required>
             <div id="passwordHelpBlock" class="form-text">
               Su contraseña debe tener entre 8 y 20 caracteres.
             </div>

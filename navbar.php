@@ -1,6 +1,7 @@
 <?php
 session_start();
 $loggedin = false;
+$username = "nombre";
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
   $loggedin = true;
 }
@@ -29,7 +30,10 @@ if (isset($_POST["logout"])) {
 
       <?php if ($loggedin) { ?>
         <li class="nav white link-white">
-          <form method="post"><button type="submit" name="logout" class="nav-link px-2">Cerrar Sesión</button></form>
+          <form method="post">
+            <span>Bienvenido, <?php echo $username; ?></span>  
+            <button type="submit" name="logout" class="nav-link px-2">Cerrar Sesión</button>
+          </form>
         </li>
       <?php } else { ?>
         <li class="nav white link-white"><a href="./Login.php" class="nav-link px-2">Login</a></li>
