@@ -1,5 +1,4 @@
 <?php
-require "./config/database.php";
 session_start();
 $loggedin = false;
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
@@ -58,14 +57,17 @@ if (isset($_POST["logout"])) {
     <li class="nav white px-2"><a href="https://desktop.telegram.org/"><img src="./images/Telegram.svg" alt="Telegram" class="Telegram"></a></li>
     <li class="nav white px-2">│</li>
 
-      <?php if ($loggedin) { ?>
-        <li class="nav white link-white">
-          <form method="post"><button type="submit" name="logout" class="nav-link px-2">Cerrar Sesión</button></form>
-        </li>
-      <?php } else { ?>
-        <li class="nav white link-white"><a href="./Login.php" class="nav-link px-2">Login</a></li>
-        <li class="nav white link-orange"><a href="./registro.php" class="nav-link">Sign up</a></li>
+    <?php if ($loggedin) { ?>
+      <?php if (isset($nombre)) { ?>
+        <li class="white"><?php echo $nombre; ?></li>
       <?php } ?>
+      <li class="nav white link-white">
+        <form method="post"><button type="submit" name="logout" class="nav-link px-2">Cerrar Sesión</button></form>
+      </li>
+    <?php } else { ?>
+      <li class="nav white link-white"><a href="./Login.php" class="nav-link px-2">Login</a></li>
+      <li class="nav white link-orange"><a href="./registro.php" class="nav-link">Sign up</a></li>
+    <?php } ?>
   </ul>
 </div>
 
@@ -83,3 +85,4 @@ if (isset($_POST["logout"])) {
     </ul>
   </div>
 </header>
+
