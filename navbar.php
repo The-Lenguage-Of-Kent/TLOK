@@ -2,7 +2,7 @@
 require "./config/database.php";
 session_start();
 $loggedin = false;
-$username = "nombre";
+$username = 'nombre';
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
   $loggedin = true;
 }
@@ -32,7 +32,7 @@ if (isset($_POST["logout"])) {
       <?php if ($loggedin) { ?>
         <li class="nav white link-white">
           <form method="post">
-            <span>Bienvenido, <?php echo $username; ?></span>  
+            <span><?php echo $username; ?></span>  
             <button type="submit" name="logout" class="nav-link px-2">Cerrar Sesión</button>
           </form>
         </li>
