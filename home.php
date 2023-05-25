@@ -225,7 +225,7 @@
       </div>
     </section>
   </main>
-  <footer class="text-center text-lg-start fot-color text-muted ">
+  <footer class="text-center text-lg-start fot-color text-muted " id="footer">
 
     <div class="container text-center text-md-start mt-5 fot-color">
       <!-- Grid row -->

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800&display=swap');
+
+body{
+    font-family: 'Roboto Slab', serif;
+}
+.container1{
+    position: relative;
+    top: 0;
+    left: 20%;
+    right: 0;
+    max-width: 580px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 6px;
+    justify-items: center;
+ 
+}
+.position{
+    position: absolute;
+    left: 0;
+    width: 700px;
+    height: auto;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.top-em-6{
+    top: 6em;
+}
+
+.top-em-15{
+    top: 15em;
+}
