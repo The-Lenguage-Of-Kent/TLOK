@@ -1,6 +1,7 @@
 <?php
 session_start();
 $loggedin = false;
+
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
   $loggedin = true;
 
@@ -32,6 +33,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 
     // Asigna el nombre de usuario a $nombre
     $nombre = $row['nombre'];
+    $roll = $row['roll'];
   }
 }
 
@@ -58,31 +60,63 @@ if (isset($_POST["logout"])) {
     <li class="nav white px-2">│</li>
 
     <?php if ($loggedin) { ?>
-      <?php if (isset($nombre)) { ?>
-        <li class="white"><?php echo $nombre; ?></li>
-      <?php } ?>
-      <li class="nav white link-white">
-        <form method="post"><button type="submit" name="logout" class="nav-link px-2">Cerrar Sesión</button></form>
-      </li>
+
+      <div class="dropdown cont-navbar white nav">
+        <div class="dropdown__trigger fs-14" onmouseover="activarAnimacion()" onmouseout="desactivarAnimacion()">
+          <?php if (isset($nombre)) { ?>
+            <li class="class=" dropdown__trigger fs-14" onmouseover="activarAnimacion()" onmouseout="desactivarAnimacion()"><?php echo $nombre; ?></li>
+          <?php } ?>
+        </div>
+        <div class=" triangulo">
+        </div>
+        <div class="dropdown__content" onmouseover="activarAnimacion()" onmouseout="desactivarAnimacion()">
+          <ul class="nav nav-pills fs-14 user-scroll">
+            <li class="nav-item nv-i"><a href="#" class="nav-link">Perfil</a></li>
+            <li class="nav-item nv-i"><a href="#" class="nav-link">Mis Modulos</a></li>
+            <li class="nav-item nv-i"><a href="#" class="nav-link">Modulos</a></li>
+            <ul class="nav nav-pills fs-14 ">
+              <?php if ($roll === 'i' || $roll === 'a') { ?>
+                <div class="pseudo-line"></div>
+                <li class="nav-item nv-i"><a href="#" class="nav-link">Editar Modulos</a></li>
+              <?php } ?>
+
+              <?php if ($roll === 'a') { ?>
+                <ul class="nav nav-pills fs-14">
+                  <div class="pseudo-line"></div>
+                  <li class="nav-item nv-i"><a href="./tabla.php" class="nav-link">Dashboard</a></li>
+                </ul>
+              <?php } ?>
+
+
+              <ul class="nav nav-pills fs-14">
+                <div class="pseudo-line"></div>
+                <li class="nav-item nv-i">
+                  <form method="post"><button type="submit" name="logout" class="nav-link">Cerrar Sesión</button></form>
+                </li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+
     <?php } else { ?>
       <li class="nav white link-white"><a href="./Login.php" class="nav-link px-2">Login</a></li>
       <li class="nav white link-orange"><a href="./registro.php" class="nav-link">Sign up</a></li>
     <?php } ?>
   </ul>
 </div>
+</ul>
+</div>
 
 
-<header class="py-3 mb-4 border-bottom">
-  <div class="container d-flex flex-wrap justify-content-center">
-    <a href="/proyect_lok/home.php" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
-      <img src="images/TLOK .png" alt="logo" class="logo">
-    </a>
-    <ul class="nav nav-pills">
-      <li class="nav-item nv-i"><a href="./home.php" class="nav-link">Home</a></li>
-      <li class="nav-item nv-i"><a href="#Section_2" class="nav-link">Recursos</a></li>
-      <li class="nav-item nv-i"><a href="#Section_3" class="nav-link">Comunidad</a></li>
-      <li class="nav-item nv-i"><a href="#footer" class="nav-link">Contacto</a></li>
-    </ul>
-  </div>
-</header>
+<script>
+  function activarAnimacion() {
+    var contenedor = document.querySelector('.cont-navbar');
+    contenedor.classList.add('animacion');
+  }
 
+  function desactivarAnimacion() {
+    var contenedor = document.querySelector('.cont-navbar');
+    contenedor.classList.remove('animacion');
+  }
+</script>

@@ -13,7 +13,21 @@
 
 <body>
 
-<?php include 'navbar.php'; ?>
+  <?php include 'navbar.php'; ?>
+
+  <header class="py-3 mb-4 border-bottom">
+    <div class="container d-flex flex-wrap justify-content-center">
+      <a href="/proyect_lok/home.php" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+        <img src="images/TLOK .png" alt="logo" class="logo">
+      </a>
+      <ul class="nav nav-pills">
+        <li class="nav-item nv-i"><a href="./home.php" class="nav-link">Home</a></li>
+        <li class="nav-item nv-i"><a href="#Section_2" class="nav-link">Recursos</a></li>
+        <li class="nav-item nv-i"><a href="#Section_3" class="nav-link">Comunidad</a></li>
+        <li class="nav-item nv-i"><a href="#footer" class="nav-link">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
 
   <main>
     <section class="Section_N1" id="Section_1">
