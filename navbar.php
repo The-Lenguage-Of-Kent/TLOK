@@ -74,10 +74,11 @@ if (isset($_POST["logout"])) {
             <li class="nav-item nv-i"><a href="#" class="nav-link">Perfil</a></li>
             <li class="nav-item nv-i"><a href="#" class="nav-link">Mis Modulos</a></li>
             <li class="nav-item nv-i"><a href="#" class="nav-link">Modulos</a></li>
-            <ul class="nav nav-pills fs-14 ">
               <?php if ($roll === 'i' || $roll === 'a') { ?>
+                <ul class="nav nav-pills fs-14 ">
                 <div class="pseudo-line"></div>
                 <li class="nav-item nv-i"><a href="#" class="nav-link">Editar Modulos</a></li>
+                </ul>
               <?php } ?>
 
               <?php if ($roll === 'a') { ?>
@@ -90,11 +91,11 @@ if (isset($_POST["logout"])) {
 
               <ul class="nav nav-pills fs-14">
                 <div class="pseudo-line"></div>
-                <li class="nav-item nv-i">
+                <li class="nav-item nv-i"><a href="#" name="logout" class="nav-link">Cerrar Sesión</a></li>
+                <!-- <li class="nav-item nv-i">
                   <form method="post"><button type="submit" name="logout" class="nav-link">Cerrar Sesión</button></form>
-                </li>
+                </li> -->
               </ul>
-            </ul>
           </ul>
         </div>
       </div>

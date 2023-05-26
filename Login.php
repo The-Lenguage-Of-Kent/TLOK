@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               <span>
 
               </span>
-              Nuevo? <a href="/SignUp.html" class="text-decoration-none">Crea una Cuenta</a>
+              Nuevo? <a href="./registro.php" class="text-decoration-none">Crea una Cuenta</a>
             </div>
           </div>
         </form>
