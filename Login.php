@@ -85,14 +85,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <div class=" text-center mt-3">
             <span>
 
-<<<<<<< HEAD
             </span>
             Nuevo? <a href="./registro.php" class="text-decoration-none">Crea una Cuenta</a>
-=======
-              </span>
-              Nuevo? <a href="./registro.php" class="text-decoration-none">Crea una Cuenta</a>
-            </div>
->>>>>>> b18dbc0796945a44b1f6b2a5ad8ddec85d3d0bcb
           </div>
         </div>
       </form>
