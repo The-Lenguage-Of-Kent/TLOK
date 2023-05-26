@@ -71,13 +71,25 @@ if (isset($_POST["logout"])) {
         </div>
         <div class="dropdown__content" onmouseover="activarAnimacion()" onmouseout="desactivarAnimacion()">
           <ul class="nav nav-pills fs-14 user-scroll">
+<<<<<<< HEAD
             <li class="nav-item nv-i"><a href="./perfil.php" class="nav-link">Perfil</a></li>
             <li class="nav-item nv-i"><a href="./mis_modulos.php" class="nav-link">Mis Modulos</a></li>
             <li class="nav-item nv-i"><a href="./modulos.php" class="nav-link">Modulos</a></li>
             <ul class="nav nav-pills fs-14 ">
+=======
+            <li class="nav-item nv-i"><a href="#" class="nav-link">Perfil</a></li>
+            <li class="nav-item nv-i"><a href="#" class="nav-link">Mis Modulos</a></li>
+            <li class="nav-item nv-i"><a href="#" class="nav-link">Modulos</a></li>
+>>>>>>> b18dbc0796945a44b1f6b2a5ad8ddec85d3d0bcb
               <?php if ($roll === 'i' || $roll === 'a') { ?>
+                <ul class="nav nav-pills fs-14 ">
                 <div class="pseudo-line"></div>
+<<<<<<< HEAD
                 <li class="nav-item nv-i"><a href="./editar_modulo.php" class="nav-link">Editar Modulos</a></li>
+=======
+                <li class="nav-item nv-i"><a href="#" class="nav-link">Editar Modulos</a></li>
+                </ul>
+>>>>>>> b18dbc0796945a44b1f6b2a5ad8ddec85d3d0bcb
               <?php } ?>
 
               <?php if ($roll === 'a') { ?>
@@ -90,11 +102,11 @@ if (isset($_POST["logout"])) {
 
               <ul class="nav nav-pills fs-14">
                 <div class="pseudo-line"></div>
-                <li class="nav-item nv-i">
+                <li class="nav-item nv-i"><a href="#" name="logout" class="nav-link">Cerrar Sesión</a></li>
+                <!-- <li class="nav-item nv-i">
                   <form method="post"><button type="submit" name="logout" class="nav-link">Cerrar Sesión</button></form>
-                </li>
+                </li> -->
               </ul>
-            </ul>
           </ul>
         </div>
       </div>
