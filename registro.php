@@ -59,39 +59,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link rel="stylesheet" href="./css/styleLOG.css">
 </head>
 
-<!-- <body>
-    <div class="signup-box">
-        <h1>Regístrate</h1>
-        <h4>Regístrate gratis, solo te tomará unos minutos</h4>
-        <form method="post">
-            <label>C.C.</label>
-            <input type="text" name="cc" placeholder="" required>
-            <label>Fecha de nacimiento</label>
-            <input type="date" name="fecha_nacimiento" placeholder="" required>
-
-            <label>nombre</label>
-            <input type="text" name="nombre" placeholder="" required>
-            <label>apellido</label>
-            <input type="text" name="apellido" placeholder="" required>
-            <label>Correo electrónico</label>
-            <input type="email" name="correo" placeholder="" required>
-            <label>Contraseña</label>
-            <input type="password" name="contraseña" placeholder="" required>
-            <label>institución</label>
-            <input type="text" name="instituto" placeholder="">
-
-            <input type="hidden" name="estado" id="estado" value="a" required>
-
-            <input type="submit" value="Registrarme">
-        </form>
-        <p>Al dar click en Regístrarme estás aceptando nuestros</p>
-        <a href="#">Términos, Condiciones</a> y <a href="#">Políticas de Privacidad</a>
-    </div>
-    <p class="para-2">¿Ya tienes una cuenta? <a href="Login.php">Entra aquí</a></p>
-
-
-</body> -->
-
 <body>
   <div>
     <div class="container0">

@@ -26,42 +26,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit;
   } else {
     // Las credenciales son incorrectas, mostrar un mensaje de error al usuario
-    echo "Usuario o contraseña incorrectos";
+    echo '
+  <script>
+    alert("El correo o contraseña esta erroneos");
+  </script>
+';
   }
 }
 
 ?>
 
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Iniciar sesión</title>
-  <link rel="stylesheet" href="./css/Forma.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap" rel="stylesheet" />
-</head>
-
-<body>
-  <div class="login-box">
-    <h1>Inicia sesión</h1>
-    <form method="post">
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo electrónico" />
-      <label for="contraseña">Contraseña</label>
-      <input type="password" id="contraseña" name="contraseña" placeholder="Ingresa tu contraseña" />
-      <input type="submit" value="Iniciar sesión" />
-    </form>
-  </div>
-  <p class="para-2">
-    No tienes una cuenta? <a href="registro.php">Regístrate ahora</a>
-  </p>
-</body>
-
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,6 +81,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <div class="col-10">
             <button class="btn btn-primary col-12" type="submit">Enviar</button>
             <div class=" text-center mt-3">
+              <span>
+
+              </span>
               Nuevo? <a href="/SignUp.html" class="text-decoration-none">Crea una Cuenta</a>
             </div>
           </div>
