@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($db->query($query2)) {
             echo '<script>window.location.href = "./tabla.php";</script>';
-        	exit();
+            exit();
         } else {
             echo "Error al cambiar el rol del usuario: " . mysqli_error($db);
         }
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($db->query($query)) {
             echo '<script>window.location.href = "./tabla.php";</script>';
-        	exit();
+            exit();
         } else {
             echo "Error al eliminar el usuario: " . mysqli_error($db);
         }
@@ -47,6 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+    <?php include 'navbar.php'; ?>
+
     <table>
         <tr>
             <td>CC</td>
@@ -89,4 +91,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 
 </html>
-

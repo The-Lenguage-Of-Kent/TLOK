@@ -95,6 +95,8 @@ $db->close();
 </head>
 
 <body>
+    <?php include 'navbar.php'; ?>
+
     <section>
         <div class="descripcion">
             <div class="separator__content">
