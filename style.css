@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800&display=swap');
 
-body{
+*{
     font-family: 'Roboto Slab', serif;
     
 }
@@ -466,4 +466,62 @@ margin: 0 0 20px 0;
 
 .text-reset:hover{
     color: #C7003F;
+}
+/* navbar */
+.triangulo {
+    position: relative;
+    width: 0;
+    height: 0;
+    right: 16px;
+    border-left: 7.5px solid transparent;
+    border-right: 7.5px solid transparent;
+    border-top: 6.5px solid rgb(255, 255, 255);
+    transition: transform 1s ease;
+    transform-origin: 180 bottom;
+}
+.cont-navbar.animacion .triangulo {
+    transform: rotate(180deg);
+  }
+.dropdown {
+    position: relative;
+    display: block;
+}
+
+.dropdown__trigger {
+    cursor: pointer;
+    background-color: #005691;
+    display: inline-block;
+    padding: 0 25px 0 12px;
+}
+
+.dropdown__content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding-top: 10px;
+    width: 100px;
+
+}
+
+.dropdown:hover .dropdown__content {
+    display: block;
+    
+}
+
+.fs-14{
+    font-size: 14px;
+}
+
+.pseudo-line{
+    background-color: #cdd3d8;
+    position: absolute;
+    height: 1.5px;
+    right: 0;
+    left: 0;
+}
+
+.user-scroll{
+    border-radius: 0 10px 10px 10px ;
+    border: 1px solid #cdd3d8;
+    background-color: #fff;
 }
