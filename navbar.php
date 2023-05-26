@@ -71,13 +71,13 @@ if (isset($_POST["logout"])) {
         </div>
         <div class="dropdown__content" onmouseover="activarAnimacion()" onmouseout="desactivarAnimacion()">
           <ul class="nav nav-pills fs-14 user-scroll">
-            <li class="nav-item nv-i"><a href="#" class="nav-link">Perfil</a></li>
-            <li class="nav-item nv-i"><a href="#" class="nav-link">Mis Modulos</a></li>
-            <li class="nav-item nv-i"><a href="#" class="nav-link">Modulos</a></li>
+            <li class="nav-item nv-i"><a href="./perfil.php" class="nav-link">Perfil</a></li>
+            <li class="nav-item nv-i"><a href="./mis_modulos.php" class="nav-link">Mis Modulos</a></li>
+            <li class="nav-item nv-i"><a href="./modulos.php" class="nav-link">Modulos</a></li>
             <ul class="nav nav-pills fs-14 ">
               <?php if ($roll === 'i' || $roll === 'a') { ?>
                 <div class="pseudo-line"></div>
-                <li class="nav-item nv-i"><a href="#" class="nav-link">Editar Modulos</a></li>
+                <li class="nav-item nv-i"><a href="./editar_modulo.php" class="nav-link">Editar Modulos</a></li>
               <?php } ?>
 
               <?php if ($roll === 'a') { ?>

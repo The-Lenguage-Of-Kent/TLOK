@@ -144,7 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="col-10">
           <button class="btn btn-primary col-12" type="submit">Enviar</button>
           <div class=" text-center mt-3" for="">
-            o <a href="/Log-in.html" class="text-decoration-none">inicia sesión</a>
+            o <a href="./Login.php" class="text-decoration-none">inicia sesión</a>
           </div>
         </div>
         <div>

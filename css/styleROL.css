@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800&display=swap');
+
+* {
+    font-family: 'Roboto Slab', serif;
+}
+
+.fsize-18 {
+    font-size: 18px;
+}
+
+.fsize-40 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.fsize-30 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.separator__content {
+    position: absolute;
+    background: #ffffff;
+    border: black;
+    text-align: center;
+    padding: 0 15px;
+    z-index: 2;
+    left: 12%;
+    top: 74px;
+}
+
+.separator__separator {
+    border-bottom: 1px solid #000;
+    height: 1px;
+    width: 70em;
+    position: absolute;
+    left: 8%;
+    top: 100px;
+    z-index: 1;
+}
+
+
+
+.access{
+    position: absolute;
+    top: 225px;
+    left: 9%;
+    width: 800px;
+}
+
+.txt-right{
+    text-align: right;
+}
+
+.Dpersonales{
+    position: absolute;
+    top: 410px;
+    left: 9%;
+    width: 800px;
+
+}
