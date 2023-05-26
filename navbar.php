@@ -115,9 +115,6 @@ if (isset($_POST["logout"])) {
     <?php } ?>
   </ul>
 </div>
-</ul>
-</div>
-
 
 <script>
   function activarAnimacion() {

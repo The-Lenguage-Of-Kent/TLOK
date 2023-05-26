@@ -100,7 +100,7 @@ $db->close();
     <section>
         <div class="descripcion">
             <div class="separator__content">
-                <h1 class="fsize-40">Ajustes y Perfil</h1>
+                <h3 class="fsize-40">Ajustes y Perfil</h3>
             </div>
             <div class="separator__separator">
                 <div class="description">

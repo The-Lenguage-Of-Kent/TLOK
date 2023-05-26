@@ -16,7 +16,7 @@
     <section>
         <div class="descripcion">
             <div class="separator__content">
-                <h1 class="fsize-40">Mis Modulos</h1>
+                <h3 class="fsize-40">Mis Modulos</h3>
             </div>
             <div class="separator__separator">
                 <div class="description">
