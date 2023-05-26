@@ -9,17 +9,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Realizar validaciones y procesamiento adicional si es necesario
 
-    // Eliminar el usuario de la base de datos
-    $query = "DELETE FROM usuario_dimensiones WHERE num_documento = '$num_documento'";
+    if (isset($_POST["nuevo_rol"])) {
+        $nuevo_rol = $_POST["nuevo_rol"];
 
-    if ($db->query($query)) {
-        echo '<script>window.location.href = "./tabla.php";</script>';
-        exit();
+        // Actualizar el rol del usuario en la base de datos
+        $query2 = "UPDATE usuario_dimensiones SET roll = '$nuevo_rol' WHERE num_documento = '$num_documento'";
+
+        if ($db->query($query2)) {
+            echo '<script>window.location.href = "./tabla.php";</script>';
+        	exit();
+        } else {
+            echo "Error al cambiar el rol del usuario: " . mysqli_error($db);
+        }
     } else {
-        echo "Error al eliminar el usuario: " . mysqli_error($db);
+        // Eliminar el usuario de la base de datos
+        $query = "DELETE FROM usuario_dimensiones WHERE num_documento = '$num_documento'";
+
+        if ($db->query($query)) {
+            echo '<script>window.location.href = "./tabla.php";</script>';
+        	exit();
+        } else {
+            echo "Error al eliminar el usuario: " . mysqli_error($db);
+        }
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,18 +69,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                         <input type="hidden" name="num_documento" value="<?= $fila['num_documento']; ?>">
                         <select name="nuevo_rol">
-                            <option value="a">Administrador</option>
-                            <option value="i">Intérprete</option>
-                            <option value="e">Estudiante</option>
-                            <option value="u">Usuario</option>
+                            <option value="a" <?php if ($fila['roll'] == 'a') echo 'selected'; ?>>Administrador</option>
+                            <option value="i" <?php if ($fila['roll'] == 'i') echo 'selected'; ?>>Intérprete</option>
+                            <option value="e" <?php if ($fila['roll'] == 'e') echo 'selected'; ?>>Estudiante</option>
+                            <option value="u" <?php if ($fila['roll'] == 'u') echo 'selected'; ?>>Usuario</option>
                         </select>
-                        <button type="submit">Cambiar rol</button>
+                        <button type="submit" name="cambiar_rol">Cambiar rol</button>
                     </form>
                 </td>
                 <td>
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                         <input type="hidden" name="num_documento" value="<?= $fila['num_documento']; ?>">
-                        <button type="submit">Eliminar</button>
+                        <button type="submit" name="eliminar">Eliminar</button>
                     </form>
                 </td>
             </tr>
@@ -74,3 +89,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 
 </html>
+
